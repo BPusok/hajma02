@@ -1,0 +1,129 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Refined Llumar Brand Color Scheme (02/2014 Brand Refresh)
+   * Softened for better UX and visual harmony
+   * RGB values converted to HSL for Tailwind compatibility
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 8% 28%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 8% 28%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 8% 28%;
+
+    /* Llumar Primary Red - Refined/Softened (darker and less saturated) */
+    --primary: 355 74% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Llumar Orange - Refined/Softened */
+    --secondary: 26 80% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Llumar Yellow - Used sparingly for accents */
+    --accent: 40 95% 57%;
+    --accent-foreground: 220 8% 28%;
+
+    --muted: 220 12% 88%;
+    --muted-foreground: 220 8% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 10% 92%;
+    --input: 220 10% 96%;
+    --ring: 355 74% 52%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 8% 28%;
+    --sidebar-primary: 355 74% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 26 80% 48%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 10% 92%;
+    --sidebar-ring: 355 74% 52%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 25% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 25% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 355 70% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 26 80% 52%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 25% 30%;
+    --muted-foreground: 220 12% 70%;
+
+    --accent: 40 95% 62%;
+    --accent-foreground: 220 8% 28%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 25% 25%;
+    --input: 220 25% 20%;
+    --ring: 355 70% 55%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 355 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 26 80% 52%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 25% 25%;
+    --sidebar-ring: 355 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
